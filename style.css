@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f6f2;
+  --text: #1e1f22;
+  --muted: #6b6f76;
+  --border: #e3e1da;
+  --max-width: 720px;
+  --spacing: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  width: 100%;
+  max-width: var(--max-width);
+  text-align: center;
+}
+
+.site-header {
+  padding-bottom: var(--spacing);
+}
+
+.site-name {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.site-main h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+.lead {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding-top: var(--spacing);
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: color 160ms ease;
+}
+
+.site-footer:hover {
+  color: var(--text);
+}
